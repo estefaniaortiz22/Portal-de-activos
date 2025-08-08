@@ -1,17 +1,17 @@
 # Portal de Activos Tecnológicos
 
-## 📌 Descripción
+##  Descripción
 Este proyecto fue desarrollado como parte del curso **Analisis y desarrollo de software** y está pensado para participar en el **MINT**.  
 Es un portal web que permite consultar los **activos tecnológicos** asignados a una persona y generar reportes cuando se detecten novedades o incidencias.
 
-## 🚀 Características
+##  Características
 - Consulta de activos tecnológicos asignados a un usuario.
 - Registro de novedades e incidencias sobre los activos.
 - Interfaz web amigable.
 - Desplegado y ejecutado sobre **Apache Tomcat**.
 - Desarrollado para su integración con sistemas de gestión de activos.
 
-## 🛠 Tecnologías utilizadas
+##  Tecnologías utilizadas
 - **Java EE / JSP / Servlets**
 - **Apache Tomcat**
 - **MySQL** (base de datos de prueba)
@@ -19,21 +19,21 @@ Es un portal web que permite consultar los **activos tecnológicos** asignados a
 - **JDBC** para conexión a base de datos
 - **Maven** para gestión de dependencias
 
-## 📂 Estructura del repositorio
+##  Estructura del repositorio
 /src # Código fuente Java
 /web # Archivos JSP, HTML, CSS y JS
 /WEB-INF # Configuración y archivos protegidos
 workspace # Carpeta de trabajo del IDE (NetBeans)
 
 
-## ⚙️ Requisitos previos
+## ⚙ Requisitos previos
 Antes de ejecutar el portal, necesitas tener instalado:
 1. **Java JDK 8 o superior**
 2. **Apache Tomcat 9 o superior**
 3. **MySQL Server** (o un motor compatible)
 4. **Maven** (opcional si usas IDE como NetBeans)
 
-## 📥 Instalación y ejecución
+##  Instalación y ejecución
 1. **Clonar el repositorio**:
    ```bash
    git clone https://github.com/estefaniaortiz22/Portal-de-activos.git
