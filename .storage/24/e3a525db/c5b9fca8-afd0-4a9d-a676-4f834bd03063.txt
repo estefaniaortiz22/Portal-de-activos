@@ -1,0 +1,1 @@
+$ mkdir -p /workspace/java-asset-portal/src/main/webapp/WEB-INF

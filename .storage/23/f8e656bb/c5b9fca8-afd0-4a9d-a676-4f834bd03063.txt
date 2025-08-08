@@ -1,0 +1,22 @@
+$ cd /workspace/shadcn-ui
+$ ls /workspace/uploads/*.jpg
+
+/workspace/uploads/gfi.jpg
+/workspace/uploads/mari.jpg
+/workspace/uploads/mariatuservicio.jpg
+$ mkdir -p /workspace/shadcn-ui/public/assets
+
+$ cp /workspace/uploads/gfi.jpg /workspace/uploads/mari.jpg /workspace/uploads/mariatuservicio.jpg /workspace/shadcn-ui/public/assets/
+
+$ cd /workspace/shadcn-ui && pnpm run lint
+
+
+> shadcnui@ lint /workspace/shadcn-ui
+> eslint --quiet ./src
+
+$ cd /workspace/shadcn-ui && pnpm run lint
+
+
+> shadcnui@ lint /workspace/shadcn-ui
+> eslint --quiet ./src
+

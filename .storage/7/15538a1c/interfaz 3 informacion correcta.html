@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gracias por Usar el Portal</title>
+    <style>
+        /* Estilos globales */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f4f8; /* Fondo claro */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Ocupa toda la altura de la ventana */
+            margin: 0;
+        }
+
+        .thank-you-container {
+            text-align: center;
+            background-color: #ffffff; /* Fondo blanco */
+            border: 2px solid #28a745; /* Borde verde */
+            border-radius: 15px; /* Bordes redondeados */
+            padding: 40px; /* Espaciado interno */
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+            width: 90%; /* Ancho responsivo */
+            max-width: 400px; /* Máximo ancho */
+        }
+
+        .checkmark {
+            font-size: 80px; /* Tamaño del chulo */
+            color: #28a745; /* Color verde */
+            margin-bottom: 20px; /* Espacio abajo del chulo */
+        }
+
+        h2 {
+            color: #333; /* Color del título */
+            margin-bottom: 10px; /* Espacio abajo del título */
+        }
+
+        p {
+            color: #666; /* Color del texto */
+            margin-bottom: 20px; /* Espacio abajo del párrafo */
+        }
+
+        .ok-button {
+            background-color: #007bff; /* Color del botón */
+            color: white; /* Color del texto del botón */
+            border: none; /* Sin borde */
+            border-radius: 5px; /* Bordes redondeados */
+            padding: 12px 24px; /* Espaciado interno */
+            cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+            font-size: 16px; /* Tamaño de la fuente */
+            transition: background-color 0.3s; /* Transición suave */
+        }
+
+        .ok-button:hover {
+            background-color: #0056b3; /* Color más oscuro al pasar el mouse */
+        }
+
+        /* Estilo adicional para responsividad */
+        @media (max-width: 600px) {
+            .thank-you-container {
+                padding: 20px; /* Menos espaciado en pantallas pequeñas */
+            }
+
+            .checkmark {
+                font-size: 60px; /* Tamaño más pequeño en pantallas pequeñas */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="thank-you-container">
+        <div class="checkmark">&#10003;</div> <!-- Chulo de aprobación -->
+        <h2>¡Gracias por usar el portal!</h2>
+        <p>Nos alegra saber que has podido acceder a la información que necesitas. Tu tiempo es valioso y agradecemos que lo hayas dedicado a nosotros. Si tienes alguna pregunta o necesitas ayuda, no dudes en volver; estamos aquí para ayudarte. ¡Hasta la próxima!</p>
+        <button class="ok-button" onclick="redirectToHome()">Aceptar</button>
+    </div>
+
+    <script>
+        function redirectToHome() {
+            // Aquí puedes redirigir al usuario a la página de inicio o a donde desees
+            window.location.href = 'index.html'; // Cambia esto según tu ruta
+        }
+    </script>
+</body>
+</html>
