@@ -1,0 +1,3 @@
+$ mkdir -p /workspace/java-asset-portal/src/main/webapp/WEB-INF
+$ mkdir -p /workspace/java-asset-portal/src/main/java/com/grupofi/portal/servlets /workspace/java-asset-portal/src/main/java/com/grupofi/portal/models /workspace/java-asset-portal/src/main/java/com/grupofi/portal/utils /workspace/java-asset-portal/src/main/webapp/resources/css /workspace/java-asset-portal/src/main/webapp/resources/js /workspace/java-asset-portal/src/main/webapp/resources/images /workspace/java-asset-portal/src/main/webapp/WEB-INF/views
+

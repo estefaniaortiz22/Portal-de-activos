@@ -1,0 +1,18 @@
+$ ls -la src/main/webapp/WEB-INF/
+total 212
+drwxr-xr-x  5 root root  16384 Aug  8 12:40 .
+drwxr-xr-x 17 root root 192512 Aug  8 12:38 ..
+-rw-r--r--  1 root root    514 Aug  8 12:40 glassfish-web.xml
+drwxr-xr-x  2 root root   4096 Aug  8 12:32 views
+-rw-r--r--  1 root root   2251 Aug  8 12:32 web.xml
+$ ls -la src/main/webapp/
+
+total 627
+drwxr-xr-x 17 root root 192512 Aug  8 12:38 .
+drwxr-xr-x 33 root root 266240 Aug  8 12:32 ..
+drwxr-xr-x  5 root root  16384 Aug  8 12:40 WEB-INF
+-rw-r--r--  1 root root   3210 Aug  8 12:38 confirmation.jsp
+-rw-r--r--  1 root root   7088 Aug  8 12:36 dashboard.jsp
+-rw-r--r--  1 root root   4958 Aug  8 12:34 login.jsp
+-rw-r--r--  1 root root   7591 Aug  8 12:39 report.jsp
+drwxr-xr-x  8 root root 143360 Aug  8 12:32 resources

@@ -1,0 +1,19 @@
+$ cd /workspace/java-asset-portal/src/main/java/com/grupofi/portal/servlets
+grep -l "@WebServlet" *.java
+ConfirmationServlet.java
+DashboardServlet.java
+LogoutServlet.java
+ReportServlet.java
+$ cd /workspace/java-asset-portal
+ls -la src/main/webapp
+
+total 651
+drwxr-xr-x 19 root root 200704 Aug 11 07:48 .
+drwxr-xr-x 35 root root 274432 Aug  8 12:32 ..
+drwxr-xr-x  3 root root   8192 Aug 11 07:48 META-INF
+drwxr-xr-x  5 root root  16384 Aug  8 12:40 WEB-INF
+-rw-r--r--  1 root root   3210 Aug  8 12:38 confirmation.jsp
+-rw-r--r--  1 root root   7088 Aug  8 12:36 dashboard.jsp
+-rw-r--r--  1 root root   4958 Aug  8 12:34 login.jsp
+-rw-r--r--  1 root root   7591 Aug  8 12:39 report.jsp
+drwxr-xr-x  8 root root 143360 Aug  8 12:32 resources

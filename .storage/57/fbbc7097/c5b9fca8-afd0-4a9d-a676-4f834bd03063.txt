@@ -1,0 +1,6 @@
+$ cd /workspace/java-asset-portal/src/main/java/com/grupofi/portal/servlets
+grep -l "@WebServlet" *.java
+ConfirmationServlet.java
+DashboardServlet.java
+LogoutServlet.java
+ReportServlet.java

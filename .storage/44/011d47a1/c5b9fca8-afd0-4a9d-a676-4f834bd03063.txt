@@ -1,0 +1,8 @@
+$ cd /workspace/java-asset-portal
+ls -la
+total 7148
+drwxr-xr-x  37 root root  282624 Aug  8 12:40 .
+drwxr-xr-x 459 root root 6758400 Aug 11 06:09 ..
+-rw-r--r--   1 root root    3931 Aug  8 12:41 README.md
+-rw-r--r--   1 root root    3092 Aug  8 12:40 pom.xml
+drwxr-xr-x  34 root root  270336 Aug  8 12:32 src

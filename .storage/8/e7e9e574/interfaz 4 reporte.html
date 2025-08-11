@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informe de Inconformidad con Activos</title>
+    <style>
+        /* Estilos globales */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f4f8; /* Fondo claro */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Ocupa toda la altura de la ventana */
+            margin: 0;
+        }
+
+        .feedback-container {
+            text-align: center;
+            background-color: #ffffff; /* Fondo blanco */
+            border: 2px solid #dc3545; /* Borde rojo */
+            border-radius: 15px; /* Bordes redondeados */
+            padding: 40px; /* Espaciado interno */
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+            width: 90%; /* Ancho responsivo */
+            max-width: 400px; /* Máximo ancho */
+        }
+
+        h2 {
+            color: #dc3545; /* Color rojo para el título */
+            margin-bottom: 20px; /* Espacio abajo del título */
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px; /* Espacio abajo de las etiquetas */
+            color: #333; /* Color de las etiquetas */
+        }
+
+        select {
+            width: 100%; /* Ancho completo */
+            padding: 10px; /* Espaciado interno */
+            border: 1px solid #ccc; /* Borde gris claro */
+            border-radius: 5px; /* Bordes redondeados */
+            margin-bottom: 20px; /* Espacio abajo del select */
+        }
+
+        .submit-button {
+            background-color: #dc3545; /* Color del botón */
+            color: white; /* Color del texto del botón */
+            border: none; /* Sin borde */
+            border-radius: 5px; /* Bordes redondeados */
+            padding: 12px 24px; /* Espaciado interno */
+            cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+            font-size: 16px; /* Tamaño de la fuente */
+            transition: background-color 0.3s; /* Transición suave */
+        }
+
+        .submit-button:hover {
+            background-color: #c82333; /* Color más oscuro al pasar el mouse */
+        }
+
+        .thank-you-message {
+            display: none; /* Ocultar inicialmente */
+            margin-top: 20px; /* Espacio arriba del mensaje */
+            color: #333; /* Color del texto del mensaje */
+        }
+
+        .accept-button {
+            display: none; /* Ocultar inicialmente */
+            background-color: #28a745; /* Color verde para el botón de aceptar */
+            color: white; /* Color del texto del botón */
+            border: none; /* Sin borde */
+            border-radius: 5px; /* Bordes redondeados */
+            padding: 12px 24px; /* Espaciado interno */
+            cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+            font-size: 16px; /* Tamaño de la fuente */
+            transition: background-color 0.3s; /* Transición suave */
+            margin-top: 10px; /* Espacio arriba del botón */
+            margin-left: auto; /* Margen automático para centrar */
+            margin-right: auto; /* Margen automático para centrar */
+            display: block; /* Cambiar a bloque para aplicar márgenes */
+        }
+
+        .accept-button:hover {
+            background-color: #218838; /* Color más oscuro al pasar el mouse */
+        }
+
+        img {
+            max-width: 100%; /* Limitar el tamaño de la imagen */
+            height: auto; /* Mantener proporciones */
+            margin-bottom: 20px; /* Espacio abajo de la imagen */
+        }
+    </style>
+</head>
+<body>
+    <div class="feedback-container">
+        <h2>Reporte de Inconformidad</h2>
+        <img src="C:/repositorio/mariatuservicio.jpg" alt="Imagen de Servicio" />
+        <p>Agradecemos mucho que reportes las inconformidades, estamos aquí para ayudarte.</p>
+        <label for="asset">Selecciona el activo con el cual no estás satisfecho:</label>
+        <select id="asset" name="asset" required>
+            <option value="">-- Selecciona un activo --</option>
+            <?php
+                // Conexión a la base de datos (ajusta los parámetros según tu configuración)
+                $servername = "tu_servidor";
+                $username = "tu_usuario";
+                $password = "tu_contraseña";
+                $dbname = "tu_base_de_datos";
+
+                // Crear conexión
+                $conn = new mysqli($servername, $username, $password, $dbname);
+
+                // Verificar conexión
+                if ($conn->connect_error) {
+                    die("Conexión fallida: " . $conn->connect_error);
+                }
+
+                // Consulta para obtener los activos
+                $sql = "SELECT id, nombre_activo FROM activos"; // Asegúrate de que la tabla y campos existan
+                $result = $conn->query($sql);
+
+                // Verificar si hay resultados y generar opciones
+                if ($result->num_rows > 0) {
+                    while ($row = $result->fetch_assoc()) {
+                        echo "<option value='" . $row['id'] . "'>" . $row['nombre_activo'] . "</option>";
+                    }
+                } else {
+                    echo "<option value=''>No hay activos disponibles</option>";
+                }
+
+                // Cerrar conexión
+                $conn->close();
+            ?>
+        </select>
+        <button class="submit-button" onclick="sendFeedback()">Enviar</button>
+
+        <div class="thank-you-message" id="thank-you-message">
+            <p>Correo enviado a mariatuservicio@grupofi.com.co para generar un caso al área encargada.</p>
+            <p>¡Gracias por tu reporte!</p>
+            <p>Se ha cerrado sesion</p>
+
+            <button class="accept-button" id="accept-button" onclick="redirectToHomePage()">Aceptar</button>
+        </div>
+    </div>
+
+    <script>
+        function sendFeedback() {
+            const asset = document.getElementById("asset").value;
+            if (asset) {
+                // Aquí puedes agregar el código para enviar el correo electrónico
+                // Por ejemplo, una llamada a un API o a un script del lado del servidor
+                document.getElementById("thank-you-message").style.display = "block"; // Mostrar mensaje de éxito
+                document.getElementById("accept-button").style.display = "block"; // Mostrar botón Aceptar
+                // Simulamos el envío del correo aquí. En un caso real, deberías enviar los datos a tu backend.
+            } else {
+                alert("Por favor, selecciona un activo.");
+            }
+        }
+
+        function redirectToHomePage() {
+            window.location.href = "file:///C:/repositorio/HTML/interfaz%201%20inicio%20de%20sesion.html"; // Cambia esto por la URL de tu página principal
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,6 @@
+$ cd /workspace/shadcn-ui
+$ ls /workspace/uploads/*.jpg
+
+/workspace/uploads/gfi.jpg
+/workspace/uploads/mari.jpg
+/workspace/uploads/mariatuservicio.jpg
